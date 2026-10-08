@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Isometra&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,16 @@ a {
   color: #333;
 }
 .member1 {
+  background-color: #fdf1f4;
+}
+.member2 {
   background-color: #ebfaff;
+}
+.member3 {
+  background-color: #fbffef;
+}
+.member4 {
+  background-color: #efe2fc;
 }
 /* 프로필카드 전체 영역 */
 section {
@@ -28,4 +38,136 @@ section {
   display: flex;
   justify-content: space-between;
 }
+.menu a {
+  font-size: 14px;
+  color: #aaa;
+}
 /* 프로필 영역 */
+.profile {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  text-align: center;
+  /* background-color: powderblue; */
+}
+/* 이미지 영역 */
+.profile-img {
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-img img {
+  width: 100%;
+  display: block;
+  transition: all 0.3s;
+}
+.profile-img img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/* 이름 */
+.profile h1 {
+  font-size: 22px;
+  color: #555;
+  font-family: "Isometra", serif;
+  text-transform: uppercase;
+}
+.profile p {
+  /* 모바일에서는 폰트가 12px아래로는 안떨어지는 게 좋음 */
+  font-size: 12px;
+  color: #888;
+}
+/* 더보기 버튼 */
+.btn-view {
+  color: rgb(206, 70, 93);
+  padding: 8px 16px;
+  border-radius: 24px;
+  background: linear-gradient(45deg, pink, rgb(231, 155, 168));
+  box-shadow: 3px 3px 20px rgba(209, 172, 187, 0.5);
+  transition: all 0.3s;
+}
+.member2 .btn-view {
+  color: rgb(61, 166, 180);
+  padding: 8px 16px;
+  border-radius: 24px;
+  background: linear-gradient(45deg, powderblue, skyblue);
+  box-shadow: 3px 3px 20px rgba(119, 155, 167, 0.5);
+  transition: all 0.3s;
+}
+.member3 .btn-view {
+  color: rgb(179, 179, 39);
+  padding: 8px 16px;
+  border-radius: 24px;
+  background: linear-gradient(45deg, rgb(255, 255, 171), rgb(231, 231, 170));
+  box-shadow: 3px 3px 20px rgba(119, 155, 167, 0.5);
+  transition: all 0.3s;
+}
+.member4 .btn-view {
+  color: rgb(204, 70, 204);
+  padding: 8px 16px;
+  border-radius: 24px;
+  background: linear-gradient(45deg, rgb(241, 171, 255), rgb(214, 151, 223));
+  box-shadow: 3px 3px 20px rgba(119, 155, 167, 0.5);
+  transition: all 0.3s;
+}
+.btn-view:hover {
+  transform: scale(1.1);
+}
+/* 연락처 목록 영역 */
+.contact {
+  color: #888;
+  /* gap: 5px; */
+  /* background-color: powderblue; */
+}
+.contact li {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+.fa-envelope {
+  font-size: 14px;
+}
+.contact li:nth-child(2) {
+  padding: none;
+  padding-top: 5px;
+  border: none;
+}
+.contact span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* 멤버별 프로필 링크 영역 */
+.others {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.others a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: powderblue;
+  filter: saturate(0.7);
+}
+.others a:nth-of-type(1) {
+  background-color: pink;
+}
+.others a:nth-of-type(2) {
+  background-color: powderblue;
+}
+.others a:nth-of-type(3) {
+  background-color: rgb(243, 243, 189);
+}
+.others a:nth-of-type(4) {
+  background-color: rgb(179, 177, 241);
+}
+/* class on은 class가더해진 애를 말함 */
+.others a.on {
+  filter: saturate(1);
+  opacity: 1;
+}
